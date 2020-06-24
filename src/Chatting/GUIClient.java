@@ -56,28 +56,7 @@ public class GUIClient extends JFrame implements ActionListener,Runnable{
    } //end
    
    public void serverConnect() {
-	   class ImagePanel extends JPanel {
-			
-		   private Image img;
-		   
-		   public ImagePanel( Image img ) {
-		      this.img = img;
-		      setSize( new Dimension(img.getWidth(null), img.getHeight(null)));
-		      setPreferredSize(new Dimension(img.getWidth(null), img.getHeight(null)));
-		      setLayout(null);
-		   }
-		   // 이미지의 가로 넓이를 구한다.
-		   public int getWidth() {
-		      return img.getWidth(null);
-		   }
-		   // 이미지의 높이 길이를 구한다.
-		   public int getHeight() {
-		      return img.getHeight(null);
-		   }
-		   public void paintComponent( Graphics g ) {
-		      g.drawImage( img, 0, 0, null);
-		   }
-		}
+	   
 	   
 	   firstPan = new JPanel();
 	   ImagePanel pn = new ImagePanel(new ImageIcon("C:/Mtest/Chatting Project/insideOut1.jpg").getImage());
@@ -259,3 +238,4 @@ public class GUIClient extends JFrame implements ActionListener,Runnable{
        new GUIClient();
     } //end
 }//GUIChatClient class END
+

@@ -211,7 +211,6 @@ public class Chatting_signUp implements ActionListener{
         });
     }
 
-    @Override
     public void actionPerformed(ActionEvent e) {
         //Object ob = e.getSource();
         

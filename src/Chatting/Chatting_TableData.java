@@ -30,14 +30,22 @@ public class Chatting_TableData extends AbstractTableModel{
 							.transaction();
 					list.add(t);
 				}
+				
 			}
 
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		for(Chatting_Transaction t: list){
-			System.out.println(t);
+	}
+	
+	// id pass È®ÀÎ¿ë
+	public int idCheck( String id, String pass ) {
+		for(Chatting_Transaction t : list){
+			if((t.getid().equals(id) == true) && (t.getPassword().equals(pass) == true)) {
+					return 1;
+			}
 		}
+		return 0;
 	}
 
 	public int getColumnCount() {
@@ -56,5 +64,7 @@ public class Chatting_TableData extends AbstractTableModel{
 	}
 
 }
+
+
 
 

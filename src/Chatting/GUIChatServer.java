@@ -106,15 +106,15 @@ class ChatHandle extends Thread { //14p 13장 스레드
       
       try{
          nickname=br.readLine();
-         server.setMsg("["+nickname+"]님 입장   \n"); 
-         broadcast("["+nickname+"]님 입장    \n");
+         server.setMsg("\n[ " + nickname+ " ]님 입장하셨습니다.\n"); 
+         broadcast("\n[ " + nickname + " ]님 입장하셨습니다.\n");
          
          //대화시작-----------------------------------
          while(true){
             try{
                String text=br.readLine();
-               server.setMsg(nickname + ": " + text +"\n");
-               broadcast(nickname + ": " + text);
+               server.setMsg( nickname + "\t: " + text +"\n");
+               broadcast(nickname + "\t: " + text+"\n");
             }catch(IOException e){   }
          } //while end
          //대화시작 끝-----------------------------------
